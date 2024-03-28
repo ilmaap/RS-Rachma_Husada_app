@@ -50,8 +50,9 @@
           <br><br><br>
           <div class="d-flex justify-content-end mt-3">
             <button type="button" class="btn btn-success btn-sm me-2">Sebelumnya</button>
-            <button type="button" class="btn btn-secondary btn-sm">Selanjutnya</button>
+            <button type="button" class="btn btn-secondary btn-sm"><a href="registertiga.blade.php" style="text-decoration: none; color: #fff">Selanjutnya</a></button>
           </div>
+          <br><br>
         </div>
       </div>
     </div>
