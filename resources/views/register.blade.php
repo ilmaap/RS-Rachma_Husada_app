@@ -14,13 +14,13 @@
   <br><br>
   <!-- //FORM Register -->
     <div class="container"  style="padding: 40px;">
-    <div class="card">
+    <div class="card" style="border-radius: 30px;">
       <div class="card-body">
         <div class="content" style="text-align: center;">
             <h2><b>Register Pasien</b></h2>
             <h5>Masukan Informasi Pasien</h5>
         </div>
-        <br><br><br><br><br>
+        <br><br><br><br>
         
         <h6 style="padding-left: 12px; font-family: Mulish;">Detail Kontak</h6>
         <div class="container">
