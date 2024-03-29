@@ -22,27 +22,27 @@
         </div>
         <br><br><br><br><br>
         
-        <h6 style="padding-left: 12px;">Detail Kontak</h6>
+        <h6 style="padding-left: 12px; font-family: Mulish;">Detail Kontak</h6>
         <div class="container">
           <div class="row">
             <div class="col">
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label" >Nomor Telpon</label>
-              <input type="email" class="form-control" style="width: 500px;" id="exampleFormControlInput1" placeholder="No. Telpon">
+              <label for="exampleFormControlInput1" class="form-label" style="font-family: Mulish;">Nomor Telpon</label>
+              <input type="email" class="form-control" style="width: 500px; font-family: Mulish;" id="exampleFormControlInput1" placeholder="No. Telpon">
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label" >Alamat</label>
-              <input type="email" class="form-control" style="width: 500px;" id="exampleFormControlInput1" placeholder="Alamat">
+              <label for="exampleFormControlInput1" class="form-label" style="font-family: Mulish;">Alamat</label>
+              <input type="email" class="form-control" style="width: 500px; font-family: Mulish;" id="exampleFormControlInput1" placeholder="Alamat">
             </div>
             </div>
             <div class="col">
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label" style="text-align: flex;">Email</label>
-              <input type="email" class="form-control" style="width: 500px;" id="exampleFormControlInput1" placeholder="Alamat Email">
+              <label for="exampleFormControlInput1" class="form-label" style="text-align: flex; font-family: Mulish;">Email</label>
+              <input type="email" class="form-control" style="width: 500px; font-family: Mulish;" id="exampleFormControlInput1" placeholder="Alamat Email">
             </div>
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label" style="text-align: flex;">Kota/Kabupaten</label>
-              <input type="email" class="form-control" style="width: 500px;" id="exampleFormControlInput1" placeholder="Kota/Kabupaten">
+              <label for="exampleFormControlInput1" class="form-label" style="text-align: flex; font-family: Mulish;">Kota/Kabupaten</label>
+              <input type="email" class="form-control" style="width: 500px; font-family: Mulish;" id="exampleFormControlInput1" placeholder="Kota/Kabupaten">
             </div>
             </div>
             </div>
