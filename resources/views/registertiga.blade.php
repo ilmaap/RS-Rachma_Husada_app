@@ -22,7 +22,7 @@
         </div>
         <br><br><br><br>
         
-        <h6 style="padding-left: 12px; font-family: Mulish;">Detail Klinis</h6>
+        <h6 style="padding-left: 12px; font-family: Mulish;"><b>Detail Klinis</b></h6>
         <div class="container">
           <div class="row">
                 <div class="row align-items-center">
