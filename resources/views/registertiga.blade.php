@@ -22,32 +22,32 @@
         </div>
         <br><br><br><br><br>
         
-        <h6 style="padding-left: 12px;">Detail Klinis</h6>
+        <h6 style="padding-left: 12px; font-family: Mulish;">Detail Klinis</h6>
         <div class="container">
           <div class="row">
                 <div class="row align-items-center">
                     <div class="col">
-                        <label for="exampleFormControlInput1" class="form-label" >Golongan Darah</label>
-                        <input type="email" class="form-control" style="width: 350px;" id="exampleFormControlInput1" placeholder="Golongan Darah">
+                        <label for="exampleFormControlInput1" class="form-label" style="font-family: Mulish;">Golongan Darah</label>
+                        <input type="email" class="form-control" style="width: 350px; font-family: Mulish;" id="exampleFormControlInput1" placeholder="Golongan Darah">
                      </div>
                      <div class="col">
-                        <label for="exampleFormControlInput1" class="form-label" >Tinggi Badan</label>
-                        <input type="email" class="form-control" style="width: 350px;" id="exampleFormControlInput1" placeholder="Tinggi Badan">
+                        <label for="exampleFormControlInput1" class="form-label" style="font-family: Mulish;">Tinggi Badan</label>
+                        <input type="email" class="form-control" style="width: 350px; font-family: Mulish;" id="exampleFormControlInput1" placeholder="Tinggi Badan">
                      </div>
                      <div class="col">
-                        <label for="exampleFormControlInput1" class="form-label" >Berat Badan</label>
-                        <input type="email" class="form-control" style="width: 350px;" id="exampleFormControlInput1" placeholder="Berat Badan">
+                        <label for="exampleFormControlInput1" class="form-label" style="font-family: Mulish;">Berat Badan</label>
+                        <input type="email" class="form-control" style="width: 350px; font-family: Mulish;" id="exampleFormControlInput1" placeholder="Berat Badan">
                      </div> 
                     </div>
             </div>
             <br>
             <div class="mb-3">
-                <label for="masukkan-alergi" class="form-label">Alergi (bila memiliki)</label>
-                <input type="email" class="form-control" style="width: 96%;" id="masukkan-alergi" placeholder=" ">
+                <label for="masukkan-alergi" class="form-label" style="font-family: Mulish;">Alergi (bila memiliki)</label>
+                <input type="email" class="form-control" style="width: 96%; font-family: Mulish;" id="masukkan-alergi" placeholder=" ">
             </div>
             <div class="mb-3">
-                <label for="masukkan-komplikasi" class="form-label">Komplikasi lain (bila memiliki)</label>
-                <input type="email" class="form-control" style="width: 96%;" id="masukkan-komplikasi" placeholder=" ">
+                <label for="masukkan-komplikasi" class="form-label" style="font-family: Mulish;">Komplikasi lain (bila memiliki)</label>
+                <input type="email" class="form-control" style="width: 96%; font-family: Mulish;" id="masukkan-komplikasi" placeholder=" ">
             </div>
             <br>
           <div class="d-flex justify-content-end mt-3">
