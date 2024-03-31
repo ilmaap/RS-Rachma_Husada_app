@@ -6,8 +6,7 @@
     <title>Page Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
-  <body style="background-color: #9AD0C2;">
-
+  <body style="background-color: #CDE4DE;">
   <h2 style="padding-top: 20px; padding-left: 50px;"><b>RS. Rachma Husada</b></h2>
 
 
@@ -28,30 +27,32 @@
             <div class="col">
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label" style="font-family: Mulish;">Nomor Telpon</label>
-              <input type="email" class="form-control" style="width: 500px; font-family: Mulish;" id="exampleFormControlInput1" placeholder="No. Telpon">
+              <input type="email" class="form-control" style="width: 100%; font-family: Mulish;" id="exampleFormControlInput1" placeholder="No. Telpon">
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label" style="font-family: Mulish;">Alamat</label>
-              <input type="email" class="form-control" style="width: 500px; font-family: Mulish;" id="exampleFormControlInput1" placeholder="Alamat">
+              <input type="email" class="form-control" style="width: 100%; font-family: Mulish;" id="exampleFormControlInput1" placeholder="Alamat">
             </div>
             </div>
             <div class="col">
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label" style="text-align: flex; font-family: Mulish;">Email</label>
-              <input type="email" class="form-control" style="width: 500px; font-family: Mulish;" id="exampleFormControlInput1" placeholder="Alamat Email">
+              <input type="email" class="form-control" style="width: 100%; font-family: Mulish;" id="exampleFormControlInput1" placeholder="Alamat Email">
             </div>
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label" style="text-align: flex; font-family: Mulish;">Kota/Kabupaten</label>
-              <input type="email" class="form-control" style="width: 500px; font-family: Mulish;" id="exampleFormControlInput1" placeholder="Kota/Kabupaten">
+              <input type="email" class="form-control" style="width: 100%; font-family: Mulish;" id="exampleFormControlInput1" placeholder="Kota/Kabupaten">
             </div>
             </div>
             </div>
           </div>
           <br><br><br>
           <div class="d-flex justify-content-end mt-3">
-            <button type="button" class="btn btn-success btn-sm me-2">Sebelumnya</button>
-            <button type="button" class="btn btn-secondary btn-sm"><a href="registertiga.blade.php" style="text-decoration: none; color: #fff">Selanjutnya</a></button>
-          </div>
+        <form action="registertiga.blade.php" method="post">
+          <button type="button" class="btn btn-success btn-sm me-2">Sebelumnya</button>
+          <input type="submit" class="btn btn-secondary btn-sm" value="Selanjutnya">
+        </form>
+      </div>
           <br><br>
         </div>
       </div>

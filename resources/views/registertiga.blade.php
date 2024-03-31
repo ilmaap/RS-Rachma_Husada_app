@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      display: none; /* Initially hidden */
+    }
+    </style>
   </head>
-  <body style="background-color: #9AD0C2;">
-
+  <body style="background-color: #CDE4DE;">
   <h2 style="padding-top: 20px; padding-left: 50px;"><b>RS. Rachma Husada</b></h2>
 
 
@@ -52,7 +65,7 @@
             <br>
           <div class="d-flex justify-content-end mt-3">
             <button type="button" class="btn btn-success btn-sm me-2"><a href="register.blade.php" style="text-decoration: none; color: #fff">Sebelumnya</a></button>
-            <button type="button" class="btn btn-secondary btn-sm">Selanjutnya</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="showPopup()">Simpan</button>
             
           </div>
           <br><br>
@@ -63,6 +76,30 @@
     </div>
 
   <!-- END FROM Register -->
+
+  <!-- Popup -->
+<div id="popup" class="popup">
+  <h3>Registrasi Berhasil!</h3>
+  <br>
+  <h5>Data Pasien</h5>
+  <h5>Telah Terdaftar</h5>
+  <br>
+  <div class="d-grid gap-2">
+  <button class="btn btn-success" type="button"onclick="hidePopup()">Selesai</button>
+  </div>
+</div>
+
+<script>
+  function showPopup() {
+    var popup = document.getElementById('popup');
+    popup.style.display = 'block';
+  }
+
+  function hidePopup() {
+    var popup = document.getElementById('popup');
+    popup.style.display = 'none';
+  }
+</script>
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
