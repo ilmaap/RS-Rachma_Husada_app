@@ -5,20 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        .popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      padding: 20px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      display: none; /* Initially hidden */
-    }
-    </style>
+    <link href="/public/css/style_popup_register.css" rel="stylesheet">
   </head>
   <body style="background-color: #CDE4DE;">
   <h2 style="padding-top: 20px; padding-left: 50px;"><b>RS. Rachma Husada</b></h2>
