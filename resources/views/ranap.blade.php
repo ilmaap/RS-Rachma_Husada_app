@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rekam Medis Pasien - RS Rachma Husada</title>
-    <link href="styleranap.css" rel="stylesheet">
+    <link href="/public/css/styleranap.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     
 </head>
@@ -15,9 +15,9 @@
         </section>
         <br>
         <section class="keterangan">
-            <h2>Pasien Rawat Jalan</h2>
+            <h2>Pasien Rawat Inap</h2>
             <div class="tambah-pasien">
-                <button type="button"><i class="fa fa-user-plus"></i> Tambah Pasien</button>
+                <button type="button"><a href="form_add_data.blade.php" style="text-decoration: none; color:black;"><i class="fa fa-user-plus"></i> Tambah Pasien</a></button>
             </div>
             <div class="cetak_pdf">
                 <button class="PDF" type="button">PDF</button>
