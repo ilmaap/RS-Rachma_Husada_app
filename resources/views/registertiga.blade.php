@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <link href="/public/css/style_popup_register.css" rel="stylesheet">
   </head>
   <body style="background-color: #CDE4DE;">
-  <h2 style="padding-top: 20px; padding-left: 50px;"><b>RS. Rachma Husada</b></h2>
+  <div style="display: flex; align-items: center;">
+    <img src="/public/assets/logo_rs-removebg-preview.png" alt="logo rs" style="width: 80px; height: auto;">
+    <h2 style="margin-left: 10px;"><b>RS. Rachma Husada</b></h2>
+  </div>
 
 
   <br><br>
@@ -66,6 +70,7 @@
 
   <!-- Popup -->
 <div id="popup" class="popup">
+  <i class="bi bi-check2-circle"></i>
   <h3>Registrasi Berhasil!</h3>
   <br>
   <h5>Data Pasien</h5>

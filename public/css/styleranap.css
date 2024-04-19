@@ -101,6 +101,11 @@ th {
     background-color: #B2CED6;
 }
 
+.icon-edit{
+    text-align: center;
+    word-spacing: 15px;
+}
+
 tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
