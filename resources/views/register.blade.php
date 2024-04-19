@@ -7,7 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body style="background-color: #CDE4DE;">
-  <h2 style="padding-top: 20px; padding-left: 50px;"><b>RS. Rachma Husada</b></h2>
+  <div style="display: flex; align-items: center;">
+    <img src="/public/assets/logo_rs-removebg-preview.png" alt="logo rs" style="width: 80px; height: auto;">
+    <h2 style="margin-left: 10px;"><b>RS. Rachma Husada</b></h2>
+  </div>
 
 
   <br><br>

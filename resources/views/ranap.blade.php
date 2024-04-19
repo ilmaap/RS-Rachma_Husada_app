@@ -6,6 +6,7 @@
     <title>Rekam Medis Pasien - RS Rachma Husada</title>
     <link href="/public/css/styleranap.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     
 </head>
 <body>
@@ -51,8 +52,10 @@
                         <td>Badan sulit digerakkan</td>
                         <td>Melati 1</td>
                         <td>
-                            <button type="button">Edit</button>
-                            <button type="button">Hapus</button>
+                            <div class="icon-edit">
+                                <i class="bi bi-pencil"></i>
+                                <i class="bi bi-trash"></i>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -62,8 +65,11 @@
                         <td>Geger, Madiun</td>
                         <td>Mual</td>
                         <td>Melati 3</td>
-                        <td> <button type="button">Edit</button>
-                            <button type="button">Hapus</button>
+                        <td>
+                            <div class="icon-edit">
+                                <i class="bi bi-pencil"></i>
+                                <i class="bi bi-trash"></i>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -74,8 +80,10 @@
                         <td>Jantung kumat</td>
                         <td>Mawar 2</td>
                         <td>
-                            <button type="button">Edit</button>
-                            <button type="button">Hapus</button>
+                            <div class="icon-edit">
+                                <i class="bi bi-pencil"></i>
+                                <i class="bi bi-trash"></i>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -86,8 +94,10 @@
                         <td>Nyeri tulang</td>
                         <td>Mawar 4</td>
                         <td>
-                            <button type="button">Edit</button>
-                            <button type="button">Hapus</button>
+                            <div class="icon-edit">
+                                <i class="bi bi-pencil"></i>
+                                <i class="bi bi-trash"></i>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -98,8 +108,10 @@
                         <td>Sesak nafas</td>
                         <td>Mawar 3</td>
                         <td>
-                            <button type="button">Edit</button>
-                            <button type="button">Hapus</button>
+                            <div class="icon-edit">
+                                <i class="bi bi-pencil"></i>
+                                <i class="bi bi-trash"></i>
+                            </div>
                         </td>
                     </tr>
                 </tbody>
