@@ -10,7 +10,7 @@
   </head>
   <body style="background-color: #CDE4DE;">
   <div style="display: flex; align-items: center;">
-    <img src="/public/assets/logo_rs-removebg-preview.png" alt="logo rs" style="width: 80px; height: auto;">
+    <img src="assets/logo_rs-removebg-preview.png" alt="logo rs" style="width: 80px; height: auto;">
     <h2 style="margin-left: 10px;"><b>RS. Rachma Husada</b></h2>
   </div>
 
@@ -55,7 +55,7 @@
             </div>
             <br>
           <div class="d-flex justify-content-end mt-3">
-            <button type="button" class="btn btn-success btn-sm me-2"><a href="register.blade.php" style="text-decoration: none; color: #fff">Sebelumnya</a></button>
+            <a href="{{ url('register') }}" type="button" class="btn btn-success btn-sm me-2">Sebelumnya</a>
             <button type="button" class="btn btn-secondary btn-sm" onclick="showPopup()">Simpan</button>
             
           </div>
