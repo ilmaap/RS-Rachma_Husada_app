@@ -6,12 +6,17 @@
     <title>Page Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="/public/css/style_popup_register.css" rel="stylesheet">
+    <link href="/css/style_popup_register.css" rel="stylesheet">
   </head>
   <body style="background-color: #CDE4DE;">
   <div style="display: flex; align-items: center;">
+<<<<<<< HEAD
+    <img src="/assets/logo_rs-removebg-preview.png" alt="logo rs" style="width: 80px; height: auto;">
+    <h3 style="margin-left: 10px; font-family: Mulish;"><b>RS. Rachma Husada</b></h3>
+=======
     <img src="assets/logo_rs-removebg-preview.png" alt="logo rs" style="width: 80px; height: auto;">
     <h2 style="margin-left: 10px;"><b>RS. Rachma Husada</b></h2>
+>>>>>>> c197f62a6c2b85bacf371c0fa5f8a9a4e04ece55
   </div>
 
 
@@ -32,32 +37,39 @@
                 <div class="row align-items-center">
                     <div class="col">
                         <label for="goldar" class="form-label" style="font-family: Mulish;">Golongan Darah</label>
-                        <input type="goldar" class="form-control" style="width: 350px; font-family: Mulish;" id="goldar" placeholder="Golongan Darah">
+                        <input type="text" class="form-control" style="width: 350px; font-family: Mulish;" id="goldar" placeholder="Golongan Darah">
                      </div>
                      <div class="col">
                         <label for="tb" class="form-label" style="font-family: Mulish;">Tinggi Badan</label>
-                        <input type="tb" class="form-control" style="width: 350px; font-family: Mulish;" id="tb" placeholder="Tinggi Badan">
+                        <input type="number" class="form-control" style="width: 350px; font-family: Mulish;" id="tb" placeholder="Tinggi Badan">
                      </div>
                      <div class="col">
                         <label for="bb" class="form-label" style="font-family: Mulish;">Berat Badan</label>
-                        <input type="bb" class="form-control" style="width: 350px; font-family: Mulish;" id="bb" placeholder="Berat Badan">
+                        <input type="number" class="form-control" style="width: 350px; font-family: Mulish;" id="bb" placeholder="Berat Badan">
                      </div> 
                     </div>
             </div>
             <br>
             <div class="mb-3">
                 <label for="masukkan-alergi" class="form-label" style="font-family: Mulish;">Alergi (bila memiliki)</label>
-                <input type="alergi" class="form-control" style="width: 96%; font-family: Mulish;" id="masukkan-alergi" placeholder=" ">
+                <input type="text" class="form-control" style="width: 96%; font-family: Mulish;" id="masukkan-alergi" placeholder=" ">
             </div>
             <div class="mb-3">
                 <label for="masukkan-komplikasi" class="form-label" style="font-family: Mulish;">Komplikasi lain (bila memiliki)</label>
-                <input type="komplikasi" class="form-control" style="width: 96%; font-family: Mulish;" id="masukkan-komplikasi" placeholder=" ">
+                <input type="text" class="form-control" style="width: 96%; font-family: Mulish;" id="masukkan-komplikasi" placeholder=" ">
             </div>
             <br>
           <div class="d-flex justify-content-end mt-3">
+<<<<<<< HEAD
+            <div class="button">
+            <button type="button" class="kembali"><a href="/register2" style="text-decoration: none; color:#000; font-family: Mulish;">Kembali</a></button>
+            <button type="button" class="simpan" style="font-family: Mulish;" onclick="showPopup()">Simpan</button>
+            </div>
+=======
             <a href="{{ url('register') }}" type="button" class="btn btn-success btn-sm me-2">Sebelumnya</a>
             <button type="button" class="btn btn-secondary btn-sm" onclick="showPopup()">Simpan</button>
             
+>>>>>>> c197f62a6c2b85bacf371c0fa5f8a9a4e04ece55
           </div>
           <br><br>
         </div>
