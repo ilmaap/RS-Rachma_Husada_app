@@ -5,10 +5,8 @@ use App\Http\Controllers\ObatController;
 use App\Http\Controllers\RajalController;
 use App\Http\Controllers\RegisterduaController;
 use App\Http\Controllers\RegistersatuController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Form_Add_DataController;
 use App\Http\Controllers\RanapController;
-use App\Http\Controllers\RegistersatuController;
 use Illuminate\Support\Facades\Route;
 
 
