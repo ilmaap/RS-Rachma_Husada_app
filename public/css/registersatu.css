@@ -1,0 +1,156 @@
+body {
+    background-color: #CDE4DE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Mulish;
+
+}
+
+/* Body */
+body {
+    font-family: Mulish;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.rs-container {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.rs-container img {
+    margin-right: 10px;
+    height: 70px;
+    width: auto;
+}
+
+/* Main */
+main {
+    padding: 30px;
+}
+
+.data {
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.registrasi {
+    border: 1px solid white;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 150px;
+    margin-left: 150px;
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+.registrasi1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.registrasi2 {
+    text-align: center;
+    color: grey;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+
+/* Section */
+section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+section p {
+    margin-bottom: 30px;
+}
+
+/* Form */
+form {
+    margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Label */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: Mulish;
+    font-size: 17px;
+
+}
+
+/* Input */
+input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Mulish;
+}
+
+.tanggal {
+    font-family: sans-serif;
+}
+
+/* Select */
+select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button */
+.kembali {
+    padding: 10px 20px;
+    background-color: #CDDCE3;
+    border: 1px solid #CDDCE3;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.selanjutnya {
+    padding: 10px 20px;
+    background-color: #D9D9D9;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button {
+    float: right;
+}
+
+button:hover {
+    background-color: #579285;
+}

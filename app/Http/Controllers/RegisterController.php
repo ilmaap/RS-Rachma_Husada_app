@@ -10,4 +10,8 @@ class RegisterController extends Controller
     {
         return view('register');
     }
+    public function regis1()
+    {
+        return view('registersatu');
+    }
 }

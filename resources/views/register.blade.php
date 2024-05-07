@@ -8,7 +8,7 @@
   </head>
   <body style="background-color: #CDE4DE;">
   <div style="display: flex; align-items: center;">
-    <img src="/public/assets/logo_rs-removebg-preview.png" alt="logo rs" style="width: 80px; height: auto;">
+    <img src="assets/logo_rs-removebg-preview.png" alt="logo rs" style="width: 80px; height: auto;">
     <h2 style="margin-left: 10px;"><b>RS. Rachma Husada</b></h2>
   </div>
 
@@ -52,8 +52,9 @@
           <br><br><br>
           <div class="d-flex justify-content-end mt-3">
         <form action="registertiga.blade.php" method="post">
-          <button type="button" class="btn btn-success btn-sm me-2">Sebelumnya</button>
-          <input type="submit" class="btn btn-secondary btn-sm" value="Selanjutnya">
+          <a href="{{ url('register1') }}" type="button" class="btn btn-success btn-sm me-2">Sebelumnya</a>
+          <a href="{{ url('registertiga') }}" type="button" class="btn btn-secondary btn-sm">Selanjutnya</a>
+          {{-- <input href="{{ url('registertiga') }} " type="submit" class="btn btn-secondary btn-sm" value="Selanjutnya"> --}}
         </form>
       </div>
           <br><br>

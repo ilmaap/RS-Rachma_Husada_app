@@ -7,10 +7,11 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RegistertigaController;
 
 Route::get('/', function () {
-    return view('register');    
+    return view('welcome');    
 });
 
 
+Route::get('/register1', [RegisterController::class, 'regis1']);
 Route::get('/register', [RegisterController::class, 'index']);
 Route::get('/registertiga', [RegistertigaController::class, 'index']);
 Route::get('/ranap',[RanapController::class, 'index']);
