@@ -1,0 +1,26 @@
+.kembali {
+    padding: 10px 20px;
+    background-color: #CDDCE3;
+    border: 1px solid #CDDCE3;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+.selanjutnya {
+    padding: 10px 20px;
+    background-color: #D9D9D9;
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button {
+    float: right;
+}
+
+button:hover {
+    background-color: #579285;
+}

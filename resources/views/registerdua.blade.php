@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style_registerdua.css">
   </head>
   <body style="background-color: #CDE4DE;">
   <div style="display: flex; align-items: center;">
+<<<<<<< HEAD:resources/views/registerdua.blade.php
+    <img src="/assets/logo_rs-removebg-preview.png" alt="logo rs" style="width: 80px; height: auto;">
+    <h3 style="margin-left: 10px; font-family: Mulish;"><b>RS. Rachma Husada</b></h3>
+=======
     <img src="assets/logo_rs-removebg-preview.png" alt="logo rs" style="width: 80px; height: auto;">
     <h2 style="margin-left: 10px;"><b>RS. Rachma Husada</b></h2>
+>>>>>>> c197f62a6c2b85bacf371c0fa5f8a9a4e04ece55:resources/views/register.blade.php
   </div>
 
 
@@ -30,11 +36,11 @@
             <div class="col">
             <div class="mb-3">
               <label for="notelp" class="form-label" style="font-family: Mulish;">Nomor Telpon</label>
-              <input type="notelp" class="form-control" style="width: 100%; font-family: Mulish;" id="notelp" placeholder="No. Telpon">
+              <input type="text" class="form-control" style="width: 100%; font-family: Mulish;" id="notelp" placeholder="No. Telpon">
             </div>
             <div class="mb-3">
               <label for="alamat" class="form-label" style="font-family: Mulish;">Alamat</label>
-              <input type="alamat" class="form-control" style="width: 100%; font-family: Mulish;" id="alamat" placeholder="Alamat">
+              <input type="text" class="form-control" style="width: 100%; font-family: Mulish;" id="alamat" placeholder="Alamat">
             </div>
             </div>
             <div class="col">
@@ -44,19 +50,28 @@
             </div>
             <div class="mb-3">
               <label for="kotakab" class="form-label" style="text-align: flex; font-family: Mulish;">Kota/Kabupaten</label>
-              <input type="kotakab" class="form-control" style="width: 100%; font-family: Mulish;" id="kotakab" placeholder="Kota/Kabupaten">
+              <input type="text" class="form-control" style="width: 100%; font-family: Mulish;" id="kotakab" placeholder="Kota/Kabupaten">
             </div>
             </div>
             </div>
           </div>
           <br><br><br>
           <div class="d-flex justify-content-end mt-3">
+<<<<<<< HEAD:resources/views/registerdua.blade.php
+    <div class="button">
+        <a href="{{ url('register1') }}"><button class="kembali" type="submit" style="font-family: Mulish;">Kembali</button></a>
+        <a href="{{ url('register3') }}"><button class="selanjutnya" type="submit" style="font-family: Mulish;">Selanjutnya</button></a>
+    </div>
+</div>
+
+=======
         <form action="registertiga.blade.php" method="post">
           <a href="{{ url('register1') }}" type="button" class="btn btn-success btn-sm me-2">Sebelumnya</a>
           <a href="{{ url('registertiga') }}" type="button" class="btn btn-secondary btn-sm">Selanjutnya</a>
           {{-- <input href="{{ url('registertiga') }} " type="submit" class="btn btn-secondary btn-sm" value="Selanjutnya"> --}}
         </form>
       </div>
+>>>>>>> c197f62a6c2b85bacf371c0fa5f8a9a4e04ece55:resources/views/register.blade.php
           <br><br>
         </div>
       </div>

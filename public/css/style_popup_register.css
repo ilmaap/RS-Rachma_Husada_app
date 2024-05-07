@@ -1,15 +1,41 @@
+.kembali {
+  padding: 10px 20px;
+  background-color: #CDDCE3;
+  border: 1px solid #CDDCE3;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.simpan {
+  padding: 10px 20px;
+  background-color: #D9D9D9;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.button {
+  float: right;
+}
+
+button:hover {
+  background-color: #579285;
+}
+
 .popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    display: none; /* Initially hidden */
-  }
-  .popup i{
-    font-size: 50px;
-  }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hidden */
+}
+.popup i{
+  font-size: 50px;
+}
