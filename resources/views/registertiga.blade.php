@@ -10,8 +10,13 @@
   </head>
   <body style="background-color: #CDE4DE;">
   <div style="display: flex; align-items: center;">
+<<<<<<< HEAD
     <img src="/assets/logo_rs-removebg-preview.png" alt="logo rs" style="width: 80px; height: auto;">
     <h3 style="margin-left: 10px; font-family: Mulish;"><b>RS. Rachma Husada</b></h3>
+=======
+    <img src="assets/logo_rs-removebg-preview.png" alt="logo rs" style="width: 80px; height: auto;">
+    <h2 style="margin-left: 10px;"><b>RS. Rachma Husada</b></h2>
+>>>>>>> c197f62a6c2b85bacf371c0fa5f8a9a4e04ece55
   </div>
 
 
@@ -55,10 +60,16 @@
             </div>
             <br>
           <div class="d-flex justify-content-end mt-3">
+<<<<<<< HEAD
             <div class="button">
             <button type="button" class="kembali"><a href="/register2" style="text-decoration: none; color:#000; font-family: Mulish;">Kembali</a></button>
             <button type="button" class="simpan" style="font-family: Mulish;" onclick="showPopup()">Simpan</button>
             </div>
+=======
+            <a href="{{ url('register') }}" type="button" class="btn btn-success btn-sm me-2">Sebelumnya</a>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="showPopup()">Simpan</button>
+            
+>>>>>>> c197f62a6c2b85bacf371c0fa5f8a9a4e04ece55
           </div>
           <br><br>
         </div>

@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Page Register</title>
+=======
+    <title>Registrasi Pasien 1 - RS Rachma Husada</title>
+>>>>>>> c197f62a6c2b85bacf371c0fa5f8a9a4e04ece55
     <link rel="stylesheet" href="/css/registersatu.css">
 </head>
 <body>
     <div class="rs-container">
+<<<<<<< HEAD
         <img class="logo" src="/assets/logo_rs-removebg-preview.png" alt="">
         <h3>RS. Rachma Husada</h3>
     </div>
     <br>
+=======
+        <img class="logo" src="assets/logo_rs-removebg-preview.png" alt="">
+        <span>RS.Rachma Husada</span>
+    </div>
+>>>>>>> c197f62a6c2b85bacf371c0fa5f8a9a4e04ece55
     <main>
         <section class="registrasi">
             <h2 class="registrasi1">Registrasi Pasien</h2>
@@ -42,8 +52,13 @@
                     </div>
                 </div>
                 <div class="button">
+<<<<<<< HEAD
                     <a href="{{ url('kembali') }}"><button class="kembali" type="submit">Kembali</button></a>
                     <a href="{{ url('register2') }}"><button class="selanjutnya" type="submit">Selanjutnya</button></a>
+=======
+                    <a href="#"><button class="kembali" type="submit">Kembali</button></a>
+                    <a href="{{ url('register') }}"><button class="selanjutnya" type="submit">Selanjutnya</button></a>
+>>>>>>> c197f62a6c2b85bacf371c0fa5f8a9a4e04ece55
                 </div>
         </section>
     </main>
