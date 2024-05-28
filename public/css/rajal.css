@@ -449,3 +449,73 @@ body.dark .switch::before {
     height: 100vh;
     width: calc(100% - 95px);
 }
+
+/* Gaya untuk tombol hapus */
+.modal-footer .btn.hapus-btn {
+    background-color: #dc3545; /* Warna latar belakang merah */
+    color: white; /* Warna teks putih */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Membuat sudut membulat */
+    cursor: pointer; /* Mengubah cursor saat dihover */
+}
+
+/* Efek hover untuk tombol hapus */
+.modal-footer .btn.hapus-btn:hover {
+    background-color: #c82333; /* Warna latar belakang merah yang lebih gelap */
+    color: white; /* Warna teks tetap putih */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan saat dihover */
+}
+
+/* Gaya untuk tombol batal */
+.modal-footer .btn.batal-btn {
+    background-color: #6c757d; /* Warna latar belakang abu-abu */
+    color: white; /* Warna teks putih */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Membuat sudut membulat */
+    cursor: pointer; /* Mengubah cursor saat dihover */
+}
+
+
+.modal-footer .btn.batal-btn:hover {
+    background-color: #5a6268; /* Warna latar belakang abu-abu yang lebih gelap */
+    color: white; /* Warna teks tetap putih */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan saat dihover */
+}
+
+/* BUTTON CETAK  */
+
+.header-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.header-content img {
+    max-width: 120px;
+    text-align: center;
+}
+
+header h1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+header h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid #333;
+    margin: 20px 0;
+    text-align: center;
+}
+
+header h3 {
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 40px;
+}

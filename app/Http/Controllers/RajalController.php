@@ -6,6 +6,7 @@ use App\Models\Rajal;
 use App\Models\Resepobat;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class RajalController extends Controller
 {
@@ -16,7 +17,7 @@ class RajalController extends Controller
             $rsRajal->where('Nama_Pasien', 'like', '%' . request('search') . '%');
         }
 
-        $rsRajal = $rsRajal->get(); // Eksekusi kueri
+        $rsRajal = Rajal::paginate(5); // Eksekusi kueri
 
         return view('pasien_rajal.rajal', compact('rsRajal'));
     }
@@ -34,6 +35,7 @@ class RajalController extends Controller
             'Jenis_Kelamin' => $request->input('Jenis_Kelamin'),
             'Alamat' => $request->input('Alamat'),
             'Keluhan' => $request->input('Keluhan'),
+            'Nama_Dokter' => $request->input('Nama_Dokter'),
             'Ruang_Pemeriksaan' => $request->input('Ruang_Pemeriksaan'),
         ]);
 
@@ -46,10 +48,13 @@ class RajalController extends Controller
         $request->validate([
             'Nama_Pasien' => 'required|string',
             'NIK' => 'required',
-            'Jenis_Kelamin' => 'required|string',
+            'Jenis_Kelamin' => 'required',
+            // 'Jenis_Kelamin' => 'required|string|in:Laki-Laki, Perempuan',
             'Alamat' => 'required|string',
             'Keluhan' => 'required|string',
-            'Ruang_Pemeriksaan' => 'required|string',
+            'Nama_Dokter' => 'Required|string',
+            'Ruang_Pemeriksaan' => 'required',
+            // 'Ruang_Pemeriksaan' => 'required|string|in:Poliklinik, Poli Anak, Poli Mata, Poli Gigi, Poli THT, Poli Saraf, Poli Bedah, Poli Dalam',
         ]);
 
         // Dapatkan obat berdasarkan ID
@@ -62,6 +67,7 @@ class RajalController extends Controller
             'Jenis_Kelamin' => $request->input('Jenis_Kelamin'),
             'Alamat' => $request->input('Alamat'),
             'Keluhan' => $request->input('Keluhan'),
+            'Nama_Dokter' => $request->input('Nama_Dokter'),
             'Ruang_Pemeriksaan' => $request->input('Ruang_Pemeriksaan'),
         ]);
 
@@ -76,5 +82,12 @@ class RajalController extends Controller
 
         return redirect()->back()->with('success', 'Perubahan berhasil disimpan.');
         ;
+    }
+
+
+    public function cetakRajal()
+    {
+        $cetakRajal = Rajal::all();
+        return view('pasien_rajal.cetak-rajal', compact('cetakRajal'));
     }
 }

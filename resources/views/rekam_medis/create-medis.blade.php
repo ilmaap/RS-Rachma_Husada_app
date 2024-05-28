@@ -117,16 +117,16 @@
         <div class="content">
             <div class="card card-info card-outline">
                 <div class="keterangan">
-                    <h2> Tambah Pasien Rawat Jalan</h2>
+                    <h2> Tambah Data Rekam Medis</h2>
                 </div>
 
                 <div class="card-body">
-                    <form action="{{ route ('pasien_rajal.simpan')}}" method="POST" onsubmit="return validateForm()">
+                    <form action="{{ route ('rekam_medis.simpan')}}" method="POST" onsubmit="return validateForm()">
                         @csrf
                         <div class="form-group">
                             <span>Nama Pasien</span>
                             <input type="text" id="Nama_Pasien" name="Nama_Pasien" class="form-control"
-                                placeholder="Nama Pasien"  required></input>
+                                placeholder="Nama Pasien" required></input>
                         </div>
                         <div class="form-group">
                             <span>NIK</span>
@@ -163,30 +163,13 @@
                             }
                         </script>
                         <div class="form-group">
-                            <span><label for="Jenis Kelamin">Jenis Kelamin</label></span>
-                            <select class="form-select" id="Jenis_Kelamin" name="Jenis_Kelamin" placeholder="Jenis_Kelamin"  required>
-                            <label for="Jenis Kelamin">Jenis Kelamin</label>
-                            <option selected>Jenis Kelamin</option>
-                            <option>Laki-laki</option>
-                            <option>Perempuan</option>
-                            </select>
-                            </div>               
-                        <div class="form-group">
-                            <span>Alamat</span>
-                            <textarea type="text" id="Alamat" name="Alamat" class="form-control" placeholder="Alamat"  required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <span>Keluhan</span>
-                            <textarea type="text" id="Keluhan" name="Keluhan" class="form-control" placeholder="Keluhan"  required></textarea>
-                        </div>
-                        <div class="form-group">
                             <span>Nama Dokter</span>
                             <input type="text" id="Nama_Dokter" name="Nama_Dokter" class="form-control"
-                            placeholder="Nama Dokter"  required></input>
+                                placeholder="Nama Dokter" required></input>
                         </div>
                         <div class="form-group">
                             <span><label for="Ruang Pemeriksaan">Ruang Pemeriksaan</label></span>
-                            <select class="form-select" id="Ruang_Pemeriksaan" name="Ruang_Pemeriksaan" placeholder="Ruang_Pemeriksaan"  required>
+                            <select class="form-select" id="Ruang_Pemeriksaan" name="Ruang_Pemeriksaan" placeholder="Ruang_Pemeriksaan" required>
                             <label for="Ruang Pemeriksaan">Ruang Pemeriksaan</label>
                             <option selected>Ruang Pemeriksaan</option>
                             <option>Poliklinik</option>
@@ -199,9 +182,26 @@
                             <option>Poli Dalam</option>
                             </select>
                         </div>
+                        <div class="form-group">
+                            <span>Hasil Pemeriksaan</span>
+                            <input type="text" id="Hasil_Pemeriksaan" name="Hasil_Pemeriksaan" class="form-control" placeholder="Hasil Pemeriksaan" required></input>
+                        </div>
+                        <div class="form-group">
+                            <span><label for="Saran">Saran</label></span>
+                            <select class="form-select" id="Saran" name="Saran" placeholder="Saran" required>
+                            <label for="Saran">Saran</label>
+                            <option selected>Saran</option>
+                            <option>Rawat Jalan</option>
+                            <option>Rawat Inap</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <span>Tanggal Periksa</span>
+                            <input type="date" id="Tanggal_Periksa" name="Tanggal_Periksa" class="form-control" placeholder="Tanggal Periksa" required></input>
+                        </div>
                         <div class="tombol">
                             <div class="form-group">
-                                <a href="/pasien_rajal" class="btn btn-success batal-btn"> Batal</a>
+                                <a href="/rekam_medis" class="btn btn-success batal-btn"> Batal</a>
                                 <button type="submit" class="btn btn-succes simpan-btn">Simpan Perubahan</button>
                             </div>
                         </div>

@@ -130,8 +130,7 @@
 
                 <div class="cetak">
                     <div class="cetak pdf">
-                        <a href="#" class="btn btn-success pdf-btn"> PDF <i class="fas fa-plus-square"></i></a>
-                        <a href="#" class="btn btn-success print-btn"> Cetak <i
+                        <a href="/cetak-rajal" class="btn btn-success print-btn"> Cetak <i
                                 class="fas fa-plus-square"></i></a>
                     </div>
                     <div class="row justify-content-end">
@@ -156,6 +155,7 @@
                                 <th scope="col">Jenis Kelamin</th>
                                 <th scope="col">Alamat</th>
                                 <th scope="col">Keluhan</th>
+                                <th scope="col">Nama Dokter</th>
                                 <th scope="col">Ruang Pemeriksaan</th>
                                 <th scope="col">Aksi</th>
                             </tr>
@@ -163,30 +163,29 @@
                         @php
                             $mulai = 1;
                         @endphp
-                        @foreach ($rsRajal as $item)
+                        @foreach ($rsRajal as $index=>$item)
                             <tbody>
                                 <tr>
-                                    <td>{{ $mulai++ }}</td>
+                                    <td>{{ $index + $rsRajal->firstItem() }}</td>
                                     <td>{{ $item->Nama_Pasien }}</td>
                                     <td>{{ $item->NIK }}</td>
                                     <td>{{ $item->Jenis_Kelamin }}</td>
                                     <td>{{ $item->Alamat }}</td>
                                     <td>{{ $item->Keluhan }}</td>
+                                    <td>{{ $item->Nama_Dokter }}</td>
                                     <td>{{ $item->Ruang_Pemeriksaan }}</td>
                                     <td>
-                                        <a href="#" class="btn btn-success btn-sm edit-btn"
-                                            data-bs-toggle="modal" data-bs-target="#exampleModal-{{ $item->NIK }}">
-                                            Edit <i class="fas fa-plus-square"></i></a>
-                                        <a href="{{ route('pasien_rajal.hapus', [ 'NIK'=> $item->NIK ]) }}" class="btn btn-success btn-sm hapus-btn"> Hapus <i
-                                                class="fas fa-plus-square" onsubmit="return confirm('tok hapus? ');"></i></a>
+                                    <a href="#" class="btn btn-success btn-sm edit-btn" data-bs-toggle="modal" data-bs-target="#exampleModal-{{ $item->NIK }}">
+                                        Edit <i class="fas fa-plus-square"></i></a>
+                                    <a href="#" class="btn btn-outline-light btn-sm hapus-btn" data-id="{{ $item->NIK }}" data-nama="{{ $item->NIK }}" data-bs-toggle="modal" data-bs-target="#modalHapus-{{ $item->NIK }}"> Hapus <i class="fas fa-plus-square"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
                         @endforeach
                     </table>
-                    <div class="navigasi">
-                <button class="sebelum" type="button">Sebelumnya</button>
-                <button class="sesudah" type="button">Selanjutnya</button>
+                    <div class="card-footer border-0 bg-white d-flex justify-content-start">
+                {{ $rsRajal->links()}}
+            </div>
             </div>
                 </div>
                 <!-- Modal Edit -->
@@ -201,35 +200,68 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="{{ route('pasien_rajal.update', $item->NIK) }}" method="POST">
+                                    <form action="{{ route('pasien_rajal.update', $item->NIK) }}" method="POST" onsubmit="return validateForm()">
                                         @csrf
                                         @method('PUT')
                                 
                                         <div class="form-group">
                                             <span>Nama Pasien</span>
                                             <input type="text" id="Nama_Pasien" name="Nama_Pasien" class="form-control"
-                                                placeholder="Nama Pasien" value="{{ $item->Nama_Pasien }}"></input>
-                                        </div>
+                                                placeholder="Nama Pasien" value="{{ $item->Nama_Pasien }}" required></input>
+                                                </div>
                                         <div class="form-group">
                                             <span>NIK</span>
-                                            <textarea type="number" id="NIK" name="NIK" class="form-control" placeholder="NIK">{{ $item->NIK }}</textarea>
+                                            <input type="text" id="NIK" name="NIK" class="form-control" placeholder="NIK" maxlength="16" required value="{{ $item->NIK }}" required>
+                                            <small id="nikError" class="form-text text-danger" style="display: none;">NIK harus berisi 16 digit angka.</small>
                                         </div>
+                                        <script>
+                                        document.getElementById('NIK').addEventListener('input', function (e) {
+                                            var value = e.target.value;
+                                            var errorMessage = document.getElementById('nikError');
+                                            
+                                            // Hapus karakter non-digit
+                                            e.target.value = value.replace(/\D/g, '');
+                                            
+                                            // Validasi panjang NIK
+                                            if (e.target.value.length !== 16) {
+                                                errorMessage.style.display = 'block';
+                                            } else {
+                                                errorMessage.style.display = 'none';
+                                            }
+                                        });
+                                        </script>
                                         <div class="form-group">
-                                            <span>Jenis Kelamin </span>
-                                            <textarea type="text" id="Jenis_Kelamin" name="Jenis_Kelamin" class="form-control" placeholder="Jenis Kelamin">{{ $item->Jenis_Kelamin }}</textarea>
+                                            <span><label for="Jenis_Kelamin">Jenis Kelamin</label></span>
+                                            <select class="form-select" id="Jenis_Kelamin" name="Jenis_Kelamin" required>
+                                            <option value="Laki-laki" {{ $item->Jenis_Kelamin == 'Laki-laki' ? 'selected' : '' }}>Laki-laki</option>
+                                            <option value="Perempuan" {{ $item->Jenis_Kelamin == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <span>Alamat</span>
-                                            <textarea type="text" id="Alamat" name="Alamat" class="form-control" placeholder="Alamat">{{ $item->Alamat }}</textarea>
+                                            <textarea type="text" id="Alamat" name="Alamat" class="form-control" placeholder="Alamat" required>{{ $item->Alamat }}</textarea>
                                         </div>
                                         <div class="form-group">
                                             <span>Keluhan</span>
-                                            <textarea type="text" id="Keluhan" name="Keluhan" class="form-control" placeholder="Keluhan">{{ $item->Keluhan }}</textarea>
+                                            <textarea type="text" id="Keluhan" name="Keluhan" class="form-control" placeholder="Keluhan" required>{{ $item->Keluhan }}</textarea>
                                         </div>
                                         <div class="form-group">
-                                            <span>Ruang Pemeriksaan</span>
-                                            <input type="text" id="Ruang_Pemeriksaan" name="Ruang_Pemeriksaan" class="form-control" placeholder="Ruang Pemeriksaan"
-                                                value="{{ $item->Ruang_Pemeriksaan }}"></input>
+                                            <span>Nama Dokter</span>
+                                            <input type="text" id="Nama_Dokter" name="Nama_Dokter" class="form-control"
+                                            placeholder="Nama Dokter" value="{{ $item->Nama_Dokter }}" required></input>
+                                        </div>
+                                        <div class="form-group">
+                                            <span><label for="Ruang_Pemeriksaan">Ruang Pemeriksaan</label></span>
+                                            <select class="form-select" id="Ruang_Pemeriksaan" name="Ruang_Pemeriksaan" required>
+                                                <option value="Poliklinik" {{ $item->Ruang_Pemeriksaan == 'Poliklinik' ? 'selected' : '' }}>Poliklinik</option>
+                                                <option value="Poli Anak" {{ $item->Ruang_Pemeriksaan == 'Poli Anak' ? 'selected' : '' }}>Poli Anak</option>
+                                                <option value="Poli Mata" {{ $item->Ruang_Pemeriksaan == 'Poli Mata' ? 'selected' : '' }}>Poli Mata</option>
+                                                <option value="Poli Gigi" {{ $item->Ruang_Pemeriksaan == 'Poli Gigi' ? 'selected' : '' }}>Poli Gigi</option>
+                                                <option value="Poli THT" {{ $item->Ruang_Pemeriksaan == 'Poli THT' ? 'selected' : '' }}>Poli THT</option>
+                                                <option value="Poli Saraf" {{ $item->Ruang_Pemeriksaan == 'Poli Saraf' ? 'selected' : '' }}>Poli Saraf</option>
+                                                <option value="Poli Bedah" {{ $item->Ruang_Pemeriksaan == 'Poli Bedah' ? 'selected' : '' }}>Poli Bedah</option>
+                                                <option value="Poli Dalam" {{ $item->Ruang_Pemeriksaan == 'Poli Dalam' ? 'selected' : '' }}>Poli Dalam</option>
+                                            </select>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
@@ -242,7 +274,34 @@
                     </div>
                 @endforeach
             </div>
-
+           
+            @foreach ($rsRajal->reverse() as $item)
+            <!-- Awal Modal Hapus -->
+            <div class="modal fade" id="modalHapus-{{ $item->NIK }}" tabindex="{{ $item->NIK }}" aria-labelledby="modalHapusLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <i class='bx bxs-trash' style="font-size: 2rem"></i><br>
+                            <span>Hapus Data</span>
+                            <p>Apakah anda yakin ingin menghapus data ini?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-light batal-btn" data-bs-dismiss="modal">Batal</button>
+                            <!-- Formulir DELETE untuk menghapus data -->
+                            <form id="formHapus" action="{{ route('pasien_rajal.hapus', $item->NIK)}}" method="POST" onsubmit="return validateForm()">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-outline-light hapus-btn">Hapus</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Akhir Modal Hapus -->
+            @endforeach
         </div>
     </section>
 
