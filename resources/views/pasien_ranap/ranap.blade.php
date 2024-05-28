@@ -1,3 +1,4 @@
+<!-- // TES COMMIT GITHUB (boleh dihapus) -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -229,8 +230,8 @@
                                         });
                                         </script>
                                     <!-- <div class="form-group">
-                                            <span>NIK</span>
-                                            <textarea type="number" id="NIK" name="NIK" class="form-control" placeholder="NIK">{{ $item->NIK }}</textarea>
+                                        <span>NIK</span>
+                                        <textarea type="number" id="NIK" name="NIK" class="form-control" placeholder="NIK">{{ $item->NIK }}</textarea>
                                         </div> -->
                                     <div class="form-group">
                                             <span><label for="Jenis_Kelamin">Jenis Kelamin</label></span>
